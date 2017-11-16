@@ -172,30 +172,3 @@ class PacManEvil(pg.sprite.Sprite):
 
         MATRIX[self.prev_y][self.prev_x] = 0
         MATRIX[self.y][self.x] = 2
-
-class Pill(pg.sprite.Sprite):
-    def __init__(self, x, y, game, color):
-        pg.sprite.Sprite.__init__(self)
-        self.alive = True
-        self.x = x
-        self.y = y
-        self.prev_x = self.x
-        self.prev_y = self.y
-        self.now=0
-
-        MATRIX[y][x] = 3
-
-        self.image = pg.Surface((WIDTH/len(MATRIX[0]), HEIGHT/len(MATRIX)))
-        self.image.fill(color)
-        self.rect = self.image.get_rect()
-
-
-        self.update()
-
-    def updateX(self):
-        posX = (WIDTH/len(MATRIX[0])-1)*self.x
-        return posX
-
-    def updateY(self):
-        posY = (HEIGHT/len(MATRIX)-1)*self.y
-        return posY
