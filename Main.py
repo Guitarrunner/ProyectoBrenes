@@ -1,7 +1,7 @@
 import pygame as pg
 import random
 from Settings import *
-import Player
+import Sprites as Player
 import Coin
 import sys
 
@@ -61,22 +61,21 @@ class Game():
                     print ("Coin up")
                     i.kill()
                     self.coins+=1
-                    #REMOVE PENDING
-                    q = Player.PacManEvil(random.randrange(0,30),random.randrange(0,30),self, YELLOW)
+                    q = Coin.Coin(random.randrange(0,30),random.randrange(0,30),self, YELLOW)
                     self.coin_sprites.add(q)
                     self.all_sprites.add(q)
                     print("COINER")
                     print(self.coins)
-            if self.coins == 5:
-                i= Player.Pill(random.randrange(0,30),random.randrange(0,30),self, PURPLE)
+            if self.coins == 20:
+                i= Coin.Coin(random.randrange(0,30),random.randrange(0,30),self, PURPLE)
                 self.pill_sprites.add(i)
                 self.all_sprites.add(i)
                 self.coins=0
-            if len(self.pill_sprites)!=0:
-                for i in self.pill_sprites:
-                    if self.player.updateX()== i.updateX() and self.player.updateY()== i.updateY():
-                        print ("PIIIIIIIILL")
-                        i.kill()
+
+            for i in self.pill_sprites:
+                if self.player.updateX()== i.updateX() and self.player.updateY()== i.updateY():
+                    print ("Pill up")
+                    i.kill()
 
         pg.quit()
 

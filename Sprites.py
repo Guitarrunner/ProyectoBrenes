@@ -172,6 +172,7 @@ class PacManEvil(pg.sprite.Sprite):
 
         MATRIX[self.prev_y][self.prev_x] = 0
         MATRIX[self.y][self.x] = 2
+<<<<<<< HEAD:Player.py
 
 class Pill(pg.sprite.Sprite):
     def __init__(self, x, y, game, color):
@@ -367,3 +368,5 @@ class Chaser(pg.sprite.Sprite):
 
         MATRIX[self.prev_y][self.prev_x] = 0
         MATRIX[self.y][self.x] = 9
+=======
+>>>>>>> cd0b330b6d2344c94715aee143b30989d8e0e597:Sprites.py
