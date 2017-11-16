@@ -9,3 +9,9 @@ def createMat(x,y):
             i.append(0)
 
     return res
+
+def calcDis(x1,y1,x2,y2):
+
+    res= (((x2-x1)**2)+((y2-y1)**2))**(1/2)
+
+    return res

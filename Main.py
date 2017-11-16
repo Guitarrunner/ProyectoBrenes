@@ -112,6 +112,7 @@ class Game():
         time = pg.time.get_ticks()
 
         if time - self.creationTimer > 1000:
+            pass
 
             if len(self.evil_sprites) < 10:
                 i = Player.PacManEvil(random.randrange(0,30),random.randrange(0,30),self, random.choice(COLORS))
