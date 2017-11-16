@@ -71,6 +71,9 @@ class Game():
                 self.pill_sprites.add(i)
                 self.all_sprites.add(i)
                 self.coins=0
+                q= Player.Chaser(random.randrange(0,30),random.randrange(0,30),self,random.choice(COLORS))
+                self.evil_sprites.add(q)
+                self.all_sprites.add(q)
 
             for i in self.pill_sprites:
                 if self.player.updateX()== i.updateX() and self.player.updateY()== i.updateY():
