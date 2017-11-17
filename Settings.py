@@ -24,5 +24,8 @@ RAND2 = (84,0,134)
 
 COLORS = [BLACK, WHITE, GREEN, RAND1, RAND2]
 
+#txt
+HF_FILE = "halloffame.txt"
+
 #Game Matrix
 MATRIX = createMat(36,32)
